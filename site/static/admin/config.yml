@@ -83,3 +83,28 @@ collections: # A list of collections the CMS should be able to edit
 
 # /admin/config.yml
 publish_mode: editorial_workflow
+
+# Add i18n
+i18n:
+  structure: multiple_folders
+  locales: [en, zh-CN]
+  default_locale: zh-CN
+
+collections:
+  - name: posts
+    label: Posts
+    folder: content/posts
+    create: true
+    i18n: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Date
+        name: date
+        widget: datetime
+        i18n: duplicate
+      - label: Body
+        name: body
+        widget: markdown
