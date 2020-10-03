@@ -9,9 +9,8 @@ collections: # A list of collections the CMS should be able to edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    i18n: true #Allow translations 
     fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string", i18n: "true"}
+      - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
@@ -84,10 +83,4 @@ collections: # A list of collections the CMS should be able to edit
 
 # /admin/config.yml
 publish_mode: editorial_workflow
-
-# Add i18n
-i18n:
-  structure: multiple_folders
-  locales: [en, zh-CN]
-  default_locale: zh-CN
 
